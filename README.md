@@ -4,7 +4,7 @@ This is the default theme for all Labs repository. Initially configured with Red
 
 This Lab was created using [Graasp App Starter React](https://github.com/react-epfl/graasp-app-starter-react)
 
-![image](https://github.com/graasp/graasp-lab-default-theme/blob/develop/public/preview.png)
+![image](https://github.com/graasp/graasp-lab-starter-react/blob/master/public/preview.png)
 
 ## Quick Start
 
