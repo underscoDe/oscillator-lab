@@ -40,7 +40,7 @@ class Header extends Component {
       >
         <Toolbar disableGutters style={{ backgroundColor: themeColor }}>
           <Typography variant="h4" color="inherit" noWrap className={classes.title}>
-            {t('Graas Lab starter kit')}
+            {t('Mechanical Oscillators Lab')}
           </Typography>
           <IconButton
             color="inherit"

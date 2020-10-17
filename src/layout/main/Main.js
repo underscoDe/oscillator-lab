@@ -10,6 +10,8 @@ import Styles from '../sidemenu/Styles';
 import { AppState } from '../../config/AppState';
 import { toggleSideMenu } from '../../actions';
 
+import StartMenu from '../../components/main/StartMenu';
+
 
 const styles = Styles;
 
@@ -53,7 +55,9 @@ class Main extends Component {
           )
         }
 
-        <div className="main-container" />
+        <div className="main-container">
+          <StartMenu />
+        </div>
       </main>
     );
   }
