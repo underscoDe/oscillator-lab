@@ -1,5 +1,7 @@
 :root {
   --color-white: #fff;
+  --item-count-1: 2;
+  --item-count-2: 3;
 }
 
 *,
@@ -66,7 +68,6 @@ body {
   background: var(--color-white);
   cursor: pointer;
   animation: on-load 0.3s ease-in-out forwards;
-  animation-delay: calc(var(--item-count) * 150ms);
 }
 
 .menu__buttons ul li::after {
@@ -88,11 +89,13 @@ body {
 .menu__buttons ul li:first-child {
   top: 13%;
   left: 9%;
+  animation-delay: calc(var(--item-count-1) * 150ms);
 }
 
 .menu__buttons ul li:nth-child(2) {
   right: 9%;
   bottom: 13%;
+  animation-delay: calc(var(--item-count-2) * 150ms);
 }
 
 .menu__buttons ul li:hover::after {
@@ -101,7 +104,7 @@ body {
   opacity: 1;
 }
 
-li i,
+li .liFa,
 li span {
   position: absolute;
 }
