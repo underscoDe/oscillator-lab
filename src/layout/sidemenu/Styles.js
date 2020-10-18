@@ -2,71 +2,71 @@ const drawerWidth = 400;
 
 const styles = theme => ({
   root: {
-    display: 'flex',
+    display: "flex"
   },
   appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+      duration: theme.transitions.duration.leavingScreen
+    })
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+      duration: theme.transitions.duration.enteringScreen
     }),
-    marginRight: drawerWidth,
+    marginRight: drawerWidth
   },
   menuButton: {
     marginLeft: 12,
     marginRight: 20,
-    position: 'absolute',
-    right: 0,
+    position: "absolute",
+    right: 0
   },
   hide: {
-    display: 'none',
+    display: "none"
   },
   drawer: {
     width: drawerWidth,
-    flexShrink: 0,
+    flexShrink: 0
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: drawerWidth
   },
   drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '0 8px',
+    display: "flex",
+    alignItems: "center",
+    padding: "0 8px",
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start"
   },
   content: {
-    height: '100%',
+    height: "100%",
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.leavingScreen
     }),
-    marginRight: -drawerWidth,
+    marginRight: -drawerWidth
   },
   contentShift: {
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+      duration: theme.transitions.duration.enteringScreen
     }),
-    marginRight: 0,
+    marginRight: 0
   },
   title: {
-    paddingLeft: '3rem',
+    paddingLeft: "3rem"
   },
   fab: {
     left: theme.spacing.unit * 4,
     top: theme.spacing.unit * 2,
-    position: 'absolute',
-    zIndex: 999999,
-  },
+    position: "absolute",
+    zIndex: 999999
+  }
 });
 
 export default styles;

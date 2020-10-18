@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core/styles';
-import Main from '../layout/main/Main';
-import SideMenu from '../layout/sidemenu/SideMenu';
-import Styles from '../layout/sidemenu/Styles';
-import { AppState } from '../config/AppState';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+//import { withStyles } from "@material-ui/core/styles";
+import Main from "../layout/main/Main";
+import SideMenu from "../layout/sidemenu/SideMenu";
+//import Styles from "../layout/sidemenu/Styles";
+import { AppState } from "../config/AppState";
 
-const styles = Styles;
+//const styles = Styles;
 
 class MainView extends Component {
   state = AppState;
@@ -16,7 +16,7 @@ class MainView extends Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div>
         <Main />
         <SideMenu />
       </div>
@@ -25,14 +25,15 @@ class MainView extends Component {
 }
 
 MainView.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+  classes: PropTypes.shape({}).isRequired
 };
 
 const mapStateToProps = state => ({
   themeColor: state.layout.themeColor,
-  showHeader: state.layout.showHeader,
+  showHeader: state.layout.showHeader
 });
 
 const connectedComponent = connect(mapStateToProps)(MainView);
 
-export default withStyles(styles, { withTheme: true })(connectedComponent);
+//export default withStyles(styles, { withTheme: true })(connectedComponent);
+export default connectedComponent;

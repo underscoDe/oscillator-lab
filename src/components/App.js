@@ -1,35 +1,32 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
-import { Progress } from 'reactstrap';
-import { DEFAULT_LANG, DEFAULT_MODE } from '../config/settings';
-import {
-  getAppInstance,
-  getContext,
-  toggleLoader,
-} from '../actions';
-import TeacherMode from '../modes/TeacherMode';
-import StudentMode from '../modes/StudentMode';
-import GraaspLogo from '../resources/GraaspLogo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
+import { Progress } from "reactstrap";
+import { DEFAULT_LANG, DEFAULT_MODE } from "../config/settings";
+import { getAppInstance, getContext, toggleLoader } from "../actions";
+import TeacherMode from "../modes/TeacherMode";
+import StudentMode from "../modes/StudentMode";
+import GraaspLogo from "../resources/GraaspLogo.svg";
+import "./App.css";
+import "./FontAwesomeIcons";
 
 export class App extends Component {
   static propTypes = {
     i18n: PropTypes.shape({
-      defaultNS: PropTypes.string,
+      defaultNS: PropTypes.string
     }).isRequired,
     loading: PropTypes.bool.isRequired,
     dispatchGetContext: PropTypes.func.isRequired,
     dispatchGetAppInstance: PropTypes.func.isRequired,
     dispatchToggleLoader: PropTypes.func.isRequired,
     mode: PropTypes.string,
-    lang: PropTypes.string,
-  }
+    lang: PropTypes.string
+  };
 
   static defaultProps = {
     mode: DEFAULT_MODE,
-    lang: DEFAULT_LANG,
+    lang: DEFAULT_LANG
   };
 
   // interval to refresh loader in ms
@@ -50,7 +47,7 @@ export class App extends Component {
   }
 
   state = {
-    progress: 0,
+    progress: 0
   };
 
   componentDidMount() {
@@ -65,7 +62,7 @@ export class App extends Component {
 
     this.loading = setInterval(() => {
       this.setState(state => ({
-        progress: state.progress + App.progressStepSize,
+        progress: state.progress + App.progressStepSize
       }));
     }, App.loadingInterval);
   }
@@ -84,7 +81,7 @@ export class App extends Component {
     }
   }
 
-  handleChangeLang = (lang) => {
+  handleChangeLang = lang => {
     const { i18n } = this.props;
     i18n.changeLanguage(lang);
   };
@@ -95,12 +92,12 @@ export class App extends Component {
 
     if (loading) {
       return (
-        <div className="App-loader">
-          <img src={GraaspLogo} className="App-loader-logo" alt="Logo" />
+        <div className='App-loader'>
+          <img src={GraaspLogo} className='App-loader-logo' alt='Logo' />
           <Progress
             value={progress}
-            barClassName="App-loader-progress-bar"
-            className="App-loader-progress-bar-container"
+            barClassName='App-loader-progress-bar'
+            className='App-loader-progress-bar-container'
           />
         </div>
       );
@@ -108,12 +105,12 @@ export class App extends Component {
 
     switch (mode) {
       // show teacher view when in teacher mode
-      case 'teacher':
+      case "teacher":
         // TODO::the teacher view is empty for the moment
         return <TeacherMode />;
 
       // by default go with the student mode
-      case 'student':
+      case "student":
       default:
         return <StudentMode />;
     }
@@ -124,13 +121,13 @@ const mapStateToProps = ({ context, layout }) => ({
   lang: context.lang,
   mode: context.mode,
   appInstanceId: context.appInstanceId,
-  loading: layout.showLoader,
+  loading: layout.showLoader
 });
 
 const mapDispatchToProps = {
   dispatchGetContext: getContext,
   dispatchGetAppInstance: getAppInstance,
-  dispatchToggleLoader: toggleLoader,
+  dispatchToggleLoader: toggleLoader
 };
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
