@@ -48,7 +48,7 @@ class Main extends Component {
           </Fab>
         )}
 
-        <div className='main-container'>
+        <div className="main-container">
           <StartMenu />
         </div>
       </main>
