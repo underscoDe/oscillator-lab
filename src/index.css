@@ -27,10 +27,9 @@ body {
   background-size: 112px 112px, 112px 112px, 56px 56px, 56px 56px, 28px 28px,
     28px 28px;
   font-family: Josefin Sans, sans-serif;
-  min-width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /*justify-content: center;
+  align-items: center;*/
 }
 

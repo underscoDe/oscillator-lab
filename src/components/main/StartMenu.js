@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../styles/StartMenu.css';
 
 const StartMenu = () => (
-  <div className='containerBg'>
     <div className='menu__buttons'>
       <ul>
         <li className='learn__item'>
@@ -16,7 +15,6 @@ const StartMenu = () => (
         </li>
       </ul>
     </div>
-  </div>
 );
 
 export default StartMenu;
