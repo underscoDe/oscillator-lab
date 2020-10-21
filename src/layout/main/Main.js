@@ -1,18 +1,24 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import classNames from "classnames";
-import { withStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-import Fab from "@material-ui/core/Fab";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import Styles from "../sidemenu/Styles";
-import { AppState } from "../../config/AppState";
-import { toggleSideMenu } from "../../actions";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import Fab from '@material-ui/core/Fab';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Styles from '../sidemenu/Styles';
+import { AppState } from '../../config/AppState';
+import {
+  toggleSideMenu,
+  goToChoice,
+  goToCourse,
+  goToQuizz
+} from '../../actions';
 
 import './Main.css';
-import StartMenu from "../../components/main/StartMenu";
-import CourseSlide from "../../components/main/CourseSlide";
+import StartMenu from '../../components/main/StartMenu';
+import CourseSlide from '../../components/main/CourseSlide';
+import QuizzPage from '../../components/main/QuizzPage';
 
 const styles = Styles;
 
@@ -25,34 +31,43 @@ class Main extends Component {
   };
 
   render() {
-    const { classes, showHeader, showSideMenu, themeColor } = this.props;
+    const {
+      classes,
+      showHeader,
+      showSideMenu,
+      themeColor,
+      labSection,
+      goToCourse,
+      goToQuizz
+    } = this.props;
 
     return (
       <main
         className={classNames(classes.content, {
           [classes.contentShift]: showSideMenu
         })}>
-        {showHeader ? <div className={classes.drawerHeader} /> : ""}
+        {showHeader ? <div className={classes.drawerHeader} /> : ''}
         {showHeader ? (
-          ""
+          ''
         ) : (
           <Fab
             color='primary'
             aria-label='Add'
             onClick={this.handleToggleSideMenu(!showSideMenu)}
             className={classes.fab}
-            style={{ backgroundColor: themeColor, outline: "none" }}>
+            style={{ backgroundColor: themeColor, outline: 'none' }}>
             {showSideMenu ? (
               <ChevronRightIcon />
             ) : (
-              <MenuIcon style={{ color: "white" }} />
+              <MenuIcon style={{ color: 'white' }} />
             )}
           </Fab>
         )}
 
-        <div className="main-container">
-          {/*<StartMenu />*/}
-          <CourseSlide />
+        <div className='main-container'>
+          {labSection === 'choicePage' && <StartMenu />}
+          {labSection === 'coursePage' && <CourseSlide />}
+          {labSection === 'quizzPage' && <QuizzPage />}
         </div>
       </main>
     );
@@ -70,11 +85,15 @@ Main.propTypes = {
 const mapStateToProps = state => ({
   themeColor: state.layout.themeColor,
   showHeader: state.layout.showHeader,
-  showSideMenu: state.layout.showSideMenu
+  showSideMenu: state.layout.showSideMenu,
+  labSection: state.labSection
 });
 
 const mapDispatchToProps = {
-  dispatchToggleSideMenu: toggleSideMenu
+  dispatchToggleSideMenu: toggleSideMenu,
+  goToChoice,
+  goToCourse,
+  goToQuizz
 };
 
 const connectedComponent = connect(mapStateToProps, mapDispatchToProps)(Main);
