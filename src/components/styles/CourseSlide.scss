@@ -1,5 +1,21 @@
 .cs-container {
-    width: 500px;
-    height: 500px;
-    border: 1px solid white;
+    width: 1000px;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-size: cover;
+    background-clip: content-box;
+    background-color: rgba(255, 255, 255, .95);
+    position: relative;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+    }
 }
