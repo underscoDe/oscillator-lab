@@ -1,9 +1,18 @@
-ol.gradient-list > li, ol.gradient-list > li::before {
+.sum-container ol.gradient-list > li, .sum-container ol.gradient-list > li::before {
   -webkit-box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
           box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
 }
 
-ol.gradient-list {
+.sum-container h2 {
+  font: 40px 'Quando';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: translate(-10%, -10%);
+          transform: translate(-10%, -10%);
+}
+
+.sum-container ol.gradient-list {
   position: absolute;
   counter-reset: gradient-counter;
   list-style: none;
@@ -15,7 +24,7 @@ ol.gradient-list {
           transform: translate(-50%, -45%);
 }
 
-ol.gradient-list > li {
+.sum-container ol.gradient-list > li {
   background: white;
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   counter-increment: gradient-counter;
@@ -26,7 +35,7 @@ ol.gradient-list > li {
   position: relative;
 }
 
-ol.gradient-list > li::before, ol.gradient-list > li::after {
+.sum-container ol.gradient-list > li::before, .sum-container ol.gradient-list > li::after {
   background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
   border-radius: 1rem 1rem 0 1rem;
   content: '';
@@ -38,7 +47,7 @@ ol.gradient-list > li::before, ol.gradient-list > li::after {
   width: 3rem;
 }
 
-ol.gradient-list > li::before {
+.sum-container ol.gradient-list > li::before {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -55,23 +64,23 @@ ol.gradient-list > li::before {
   z-index: 1;
 }
 
-ol.gradient-list > li:nth-child(10n+1):before {
+.sum-container ol.gradient-list > li:nth-child(10n+1):before {
   background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
 }
 
-ol.gradient-list > li:nth-child(10n+2):before {
+.sum-container ol.gradient-list > li:nth-child(10n+2):before {
   background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
 }
 
-ol.gradient-list > li:nth-child(10n+2):before {
+.sum-container ol.gradient-list > li:nth-child(10n+2):before {
   background: linear-gradient(135deg, #a2ed56 0%, #fddc32 100%);
 }
 
-ol.gradient-list > li:nth-child(10n+3):before {
+.sum-container ol.gradient-list > li:nth-child(10n+3):before {
   background: linear-gradient(135deg, #a2ed56 0%, #fddc32 100%);
 }
 
-ol.gradient-list > li + li {
+.sum-container ol.gradient-list > li + li {
   margin-top: 2rem;
 }
 /*# sourceMappingURL=SummarySlide.css.map */

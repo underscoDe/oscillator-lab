@@ -1,4 +1,10 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBook, faBrain } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faBook, 
+    faBrain, 
+    faHome,
+    faHandPointLeft, 
+    faHandPointRight
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBook, faBrain);
+library.add(faBook, faBrain, faHome, faHandPointLeft, faHandPointRight);

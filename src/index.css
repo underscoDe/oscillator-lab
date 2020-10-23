@@ -1,7 +1,11 @@
+@import url('https://db.onlinewebfonts.com/c/379c31b5db00641e87bdadb9cfbb9ad3?family=Quando');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
   --color-white: #fff;
   --item-count-1: 2;
   --item-count-2: 3;
+  --item-count-3: 4;
 }
 
 *,

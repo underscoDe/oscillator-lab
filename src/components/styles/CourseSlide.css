@@ -1,25 +1,152 @@
-.cs-container {
-  width: 1000px;
-  height: 100%;
-  border: 1px solid #ddd;
-  padding: 10px;
-  background-size: cover;
-  background-clip: content-box;
-  background-color: rgba(255, 255, 255, 0.95);
-  position: relative;
+.cs-container .course-section, .cs-container .menu-section .menu__buttons ul li {
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
           box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.cs-container::after {
-  content: "";
-  display: block;
+.cs-container {
+  position: relative;
+}
+
+.cs-container .course-section, .cs-container .menu-section, .cs-container .menu-section .menu__buttons, .cs-container .menu-section .menu__buttons::before {
   position: absolute;
 }
 
-.cs-container::before {
+.cs-container {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-container .course-section {
+  width: 55%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-size: cover;
+  background-clip: content-box;
+  background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140, 0.03) 0%, rgba(140, 140, 140, 0.03) 25%, transparent 25%, transparent 100%), radial-gradient(circle at 28% 63%, rgba(143, 143, 143, 0.03) 0%, rgba(143, 143, 143, 0.03) 16%, transparent 16%, transparent 100%), radial-gradient(circle at 81% 56%, rgba(65, 65, 65, 0.03) 0%, rgba(65, 65, 65, 0.03) 12%, transparent 12%, transparent 100%), radial-gradient(circle at 26% 48%, rgba(60, 60, 60, 0.03) 0%, rgba(60, 60, 60, 0.03) 6%, transparent 6%, transparent 100%), radial-gradient(circle at 97% 17%, rgba(150, 150, 150, 0.03) 0%, rgba(150, 150, 150, 0.03) 56%, transparent 56%, transparent 100%), radial-gradient(circle at 50% 100%, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 36%, transparent 36%, transparent 100%), radial-gradient(circle at 55% 52%, rgba(69, 69, 69, 0.03) 0%, rgba(69, 69, 69, 0.03) 6%, transparent 6%, transparent 100%), -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140, 0.03) 0%, rgba(140, 140, 140, 0.03) 25%, transparent 25%, transparent 100%), radial-gradient(circle at 28% 63%, rgba(143, 143, 143, 0.03) 0%, rgba(143, 143, 143, 0.03) 16%, transparent 16%, transparent 100%), radial-gradient(circle at 81% 56%, rgba(65, 65, 65, 0.03) 0%, rgba(65, 65, 65, 0.03) 12%, transparent 12%, transparent 100%), radial-gradient(circle at 26% 48%, rgba(60, 60, 60, 0.03) 0%, rgba(60, 60, 60, 0.03) 6%, transparent 6%, transparent 100%), radial-gradient(circle at 97% 17%, rgba(150, 150, 150, 0.03) 0%, rgba(150, 150, 150, 0.03) 56%, transparent 56%, transparent 100%), radial-gradient(circle at 50% 100%, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 36%, transparent 36%, transparent 100%), radial-gradient(circle at 55% 52%, rgba(69, 69, 69, 0.03) 0%, rgba(69, 69, 69, 0.03) 6%, transparent 6%, transparent 100%), linear-gradient(90deg, white, white);
+}
+
+.cs-container .menu-section {
+  width: 45%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.cs-container .menu-section .menu__buttons {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+}
+
+.cs-container .menu-section .menu__buttons::before {
+  content: '';
+  top: 50%;
+  left: -20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 1px;
+  width: 494px;
+  background: var(--color-white);
+}
+
+.cs-container .menu-section .menu__buttons ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cs-container .menu-section .menu__buttons ul li {
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  border: none;
+  list-style-type: none;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+  -webkit-animation: on-load 0.3s ease-in-out forwards;
+          animation: on-load 0.3s ease-in-out forwards;
+}
+
+.cs-container .menu-section .menu__buttons ul li::after {
   content: "";
   display: block;
   position: absolute;
+  background: transparent;
+  border: 2px dashed var(--color-white);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  transition: all 0.3s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.cs-container .menu-section .menu__buttons ul li:first-child {
+  top: 5%;
+  left: 30%;
+  -webkit-animation-delay: calc(var(--item-count-1) * 150ms);
+          animation-delay: calc(var(--item-count-1) * 150ms);
+}
+
+.cs-container .menu-section .menu__buttons ul li:nth-child(2) {
+  right: 5%;
+  bottom: 7%;
+  -webkit-animation-delay: calc(var(--item-count-2) * 150ms);
+          animation-delay: calc(var(--item-count-2) * 150ms);
+}
+
+.cs-container .menu-section .menu__buttons ul li:nth-child(3) {
+  left: 5%;
+  bottom: 7%;
+  -webkit-animation-delay: calc(var(--item-count-3) * 150ms);
+          animation-delay: calc(var(--item-count-3) * 150ms);
+}
+
+.cs-container .menu-section .menu__buttons ul li:hover::after {
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  transition: all 0.3s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.cs-container .menu-section .menu__buttons ul li .liFa,
+.cs-container .menu-section .menu__buttons ul li span {
+  position: absolute;
+}
+
+.cs-container .menu-section .menu__buttons ul li .liFa {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cs-container .menu-section .menu__buttons ul li span {
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  transition: all 0.3s cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  opacity: 0;
+}
+
+.cs-container .menu-section .menu__buttons ul li:hover span {
+  opacity: 1;
 }
 /*# sourceMappingURL=CourseSlide.css.map */
