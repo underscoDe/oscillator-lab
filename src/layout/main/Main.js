@@ -19,6 +19,8 @@ import './Main.css';
 import StartMenu from '../../components/main/StartMenu';
 import CourseSlide from '../../components/main/CourseSlide';
 import QuizzPage from '../../components/main/QuizzPage';
+import QuizzPenduleSimple from '../../components/main/QuizzPenduleSimple';
+import QuizzPenduleElastique from '../../components/main/QuizzPenduleElastique';
 
 const styles = Styles;
 
@@ -68,6 +70,8 @@ class Main extends Component {
           {labSection === 'choicePage' && <StartMenu />}
           {labSection === 'coursePage' && <CourseSlide />}
           {labSection === 'quizzPage' && <QuizzPage />}
+          {labSection === 'quizzPenduleSimple' && <QuizzPenduleSimple />}
+          {labSection === 'quizzPenduleElastique' && <QuizzPenduleElastique />}
         </div>
       </main>
     );

@@ -1,0 +1,29 @@
+.penduleElastiqueRoot {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+
+  .animationSVG {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 8rem;
+    background-color: rgba(19, 108, 180, 0.801);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  .forceChoose {
+    list-style: none;
+    padding: 1rem;
+
+    li {
+      margin: 1rem;
+    }
+
+    .groupChoice {
+      display: flex;
+    }
+  }
+}

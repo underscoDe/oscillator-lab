@@ -1,4 +1,10 @@
-import { CHOICE_PAGE, COURSE_PAGE, QUIZZ_PAGE } from '../types';
+import {
+  CHOICE_PAGE,
+  COURSE_PAGE,
+  QUIZZ_PAGE,
+  QUIZZ_PENDULE_SIMPLE,
+  QUIZZ_PENDULE_ELASTIQUE
+} from '../types';
 
 const initialState = 'choicePage';
 
@@ -10,6 +16,10 @@ export default (state = initialState, action) => {
       return 'coursePage';
     case QUIZZ_PAGE:
       return 'quizzPage';
+    case QUIZZ_PENDULE_SIMPLE:
+      return 'quizzPenduleSimple';
+    case QUIZZ_PENDULE_ELASTIQUE:
+      return 'quizzPenduleElastique';
     default:
       return state;
   }

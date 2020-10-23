@@ -1,22 +1,35 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
-import { goToChoice } from '../../actions';
+import { goToPenduleSimple, goToPenduleElastique, goToChoice } from '../../actions';
 import { connect } from 'react-redux';
+import { Button } from "@material-ui/core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/QuizzPage.scss';
 
-const QuizzPage = props => (
-  <div>
-    <h1>This will be the quizz page!</h1>
-    <Button
-      onClick={() => props.goToChoice()}
-      variant='contained'
-      color='secondary'>
-      Back
-    </Button>
-  </div>
-);
+const QuizzPage = ({ goToPenduleSimplePage, goToPenduleElastiquePage, goToChoicePage }) => {
+
+  return (
+    <div className="quizzPageRoot">
+      <Button color="default" variant="contained" onClick={ ()=> goToChoicePage() }>Retour</Button>
+      <div className='menu__buttons'>
+          <ul>
+            <li onClick={() => goToPenduleSimplePage()} className='learn__item'>
+              <FontAwesomeIcon icon='book' size='3x' className='liFa' />
+              <span className='cours__text'>Pendule Simple</span>
+            </li>
+            <li onClick={() => goToPenduleElastiquePage()} className='quiz__item'>
+              <FontAwesomeIcon icon='brain' size='3x' className='liFa' />
+              <span className='quiz__text'>Pendule Elastique</span>
+            </li>
+          </ul>
+        </div>
+    </div>
+  );
+}
 
 const mapDispatchToProps = {
-  goToChoice
+  goToChoicePage: goToChoice,
+  goToPenduleSimplePage: goToPenduleSimple,
+  goToPenduleElastiquePage: goToPenduleElastique,
 };
 
 const connectedComponent = connect(null, mapDispatchToProps)(QuizzPage);
