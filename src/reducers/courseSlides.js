@@ -12,5 +12,5 @@ export default (state = initialState, action) => {
     }else if(action.type === PREVIOUS_SLIDE) {
         return (state > 1) ? state - 1 : state;
     }
-    return initialState;
+    return state;
 };

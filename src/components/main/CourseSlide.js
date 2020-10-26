@@ -14,7 +14,12 @@ import DefinitionSlide from './DefinitionSlide';
 
 class CourseSlide extends Component {
     render() {
-        const { goToChoice, courseSlides } = this.props;
+        const { 
+            goToChoice, 
+            courseSlides,
+            showNextSlide,
+            showPreviousSlide
+        } = this.props;
 
         return (
             <div className="cs-container">
@@ -55,5 +60,5 @@ const mapDispatchToProps = {
     showPreviousSlide
 };
   
-const connectedComponent = connect(null, mapDispatchToProps)(CourseSlide);
+const connectedComponent = connect(mapStateToProps, mapDispatchToProps)(CourseSlide);
 export default connectedComponent;
