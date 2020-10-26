@@ -115,13 +115,13 @@ class QuizzPenduleElastique extends Component {
   };
 
   validateAnswers = () => {
-    // This methode will validate the final answers choosed from the quizz. The forces and their orientation
+    // This methode will validate the final answers choosen from the quizz. The forces and their orientation
     const { answers } = this.props;
     const { questions } = this.state;
     if (isArrayEqual(answers, questions)) {
-      swal('BRAVO', 'Vous avez reussi le quizz', 'success');
+      swal('BRAVO', 'Vous avez reussi le quiz', 'success');
     } else {
-      swal('DESOLER', 'Vos reponses sont incorrectes', 'error');
+      swal('DESOLE', 'Vos reponses sont incorrectes', 'error');
     }
   };
 

@@ -3,17 +3,24 @@ import './SummarySlide';
 import '../styles/CourseSlide.css';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { goToChoice } from '../../actions';
+import {
+    goToChoice,
+    showNextSlide,
+    showPreviousSlide
+} from '../../actions';
+
 import SummarySlide from './SummarySlide';
+import DefinitionSlide from './DefinitionSlide';
 
 class CourseSlide extends Component {
     render() {
-        const { goToChoice } = this.props;
+        const { goToChoice, courseSlides } = this.props;
 
         return (
             <div className="cs-container">
                 <div className="course-section">
-                    <SummarySlide />
+                    {courseSlides === 1 && <SummarySlide />}
+                    {courseSlides === 2 && <DefinitionSlide />}
                 </div>
                 <div className="menu-section">
                     <div className='menu__buttons'>
@@ -22,11 +29,11 @@ class CourseSlide extends Component {
                                 <FontAwesomeIcon icon='home' size='3x' className='liFa' />
                                 <span className='cours__text'>Menu</span>
                             </li>
-                            <li className='quiz__item'>
+                            <li onClick={() => showNextSlide()} className='quiz__item'>
                                 <FontAwesomeIcon icon='hand-point-right' size='3x' className='liFa' />
                                 <span className='quiz__text'>Next</span>
                             </li>
-                            <li className='quiz__item'>
+                            <li onClick={() => showPreviousSlide()} className='quiz__item'>
                                 <FontAwesomeIcon icon='hand-point-left' size='3x' className='liFa' />
                                 <span className='quiz__text'>Prev</span>
                             </li>
@@ -38,8 +45,14 @@ class CourseSlide extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+    courseSlides: state.courseSlides
+});
+
 const mapDispatchToProps = {
     goToChoice,
+    showNextSlide,
+    showPreviousSlide
 };
   
 const connectedComponent = connect(null, mapDispatchToProps)(CourseSlide);

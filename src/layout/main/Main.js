@@ -38,9 +38,7 @@ class Main extends Component {
       showHeader,
       showSideMenu,
       themeColor,
-      labSection,
-      goToCourse,
-      goToQuizz
+      labSection
     } = this.props;
 
     return (

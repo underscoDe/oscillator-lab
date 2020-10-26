@@ -1,0 +1,38 @@
+.penduleElastiqueRoot {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.penduleElastiqueRoot .animationSVG {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 8rem;
+  background-color: rgba(19, 108, 180, 0.801);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.penduleElastiqueRoot .forceChoose {
+  list-style: none;
+  padding: 1rem;
+}
+
+.penduleElastiqueRoot .forceChoose li {
+  margin: 1rem;
+}
+
+.penduleElastiqueRoot .forceChoose .groupChoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=QuizzPenduleElastique.css.map */

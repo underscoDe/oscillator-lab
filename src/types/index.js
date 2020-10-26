@@ -3,3 +3,4 @@ export * from "./context";
 export * from "./appInstance";
 export * from "./users";
 export * from "./labSection";
+export * from "./courseSlides";

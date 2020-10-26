@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,MAAM,EAAE,GAAG;CAKd",
+    "sources": [
+        "QuizzPage.scss"
+    ],
+    "names": [],
+    "file": "QuizzPage.css"
+}
