@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,MAAM,EAAE,eAAe;CAM1B",
+    "sources": [
+        "ElasticPendulumFirstSlide.scss"
+    ],
+    "names": [],
+    "file": "ElasticPendulumFirstSlide.css"
+}

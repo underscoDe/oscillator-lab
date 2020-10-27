@@ -11,6 +11,7 @@ import {
 
 import SummarySlide from './SummarySlide';
 import DefinitionSlide from './DefinitionSlide';
+import ElasticPendulumFirstSlide from './ElasticPendulumFirstSlide';
 
 class CourseSlide extends Component {
     render() {
@@ -24,8 +25,9 @@ class CourseSlide extends Component {
         return (
             <div className="cs-container">
                 <div className="course-section">
-                    {courseSlides === 1 && <SummarySlide />}
-                    {courseSlides === 2 && <DefinitionSlide />}
+                    {/*courseSlides === 1 && <SummarySlide />*/}
+                    {/*courseSlides === 2 && <DefinitionSlide />*/}
+                    <DefinitionSlide />
                 </div>
                 <div className="menu-section">
                     <div className='menu__buttons'>
