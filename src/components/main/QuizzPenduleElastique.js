@@ -19,6 +19,7 @@ class QuizzPenduleElastique extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      quizzPassed: false,
       questions: [
         {
           choice: 1,
@@ -121,15 +122,17 @@ class QuizzPenduleElastique extends Component {
     const { answers } = this.props;
     const { questions } = this.state;
     if (isArrayEqual(answers, questions)) {
+      this.setState({ quizzPassed: true });
       swal('BRAVO', 'Vous avez reussi le quiz', 'success');
     } else {
+      this.setState({ quizzPassed: false })
       swal('DESOLE', 'Vos reponses sont incorrectes', 'error');
     }
   };
 
   render() {
     const { goToQuizzPage } = this.props;
-    const { questions } = this.state;
+    const { questions, quizzPassed } = this.state;
     return (
       <>
         <Button
@@ -155,6 +158,7 @@ class QuizzPenduleElastique extends Component {
                 />
                 <li>{htmlParse(question.question)}</li>
                 {question.orientation && (<span onClick={()=>this.chooseOrientation(index, true)} className="orientationChoosed">(Oriente vers: {question.orientation})</span>)}
+                {(question.checked && !question.orientation) && (<span onClick={()=>this.chooseOrientation(index, true)} className="orientationChoosed">(Aucune orientation choisie)</span>)}
               </p>
             ))}
             <Button
@@ -163,6 +167,13 @@ class QuizzPenduleElastique extends Component {
               variant='contained'>
               Verifier vos reponses
             </Button>
+            {quizzPassed && (<Button
+              //onClick={} Go to the next Quizz
+              style={{marginLeft: '1rem'}}
+              color='default'
+              variant='contained'>
+              Quizz Suivant
+            </Button>)}
           </ul>
         </div>
       </>
