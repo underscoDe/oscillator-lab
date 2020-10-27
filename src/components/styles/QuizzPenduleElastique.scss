@@ -24,6 +24,17 @@
 
     .groupChoice {
       display: flex;
+      align-items: center;
+
+      .orientationChoosed {
+        color: crimson;
+        font-size: 0.8rem;
+        cursor: pointer;
+
+        &:hover{
+          font-weight: bold;
+        }
+      }
     }
   }
 }

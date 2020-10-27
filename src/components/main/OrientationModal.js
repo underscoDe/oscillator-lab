@@ -7,8 +7,8 @@ import {
   FormControlLabel
 } from '@material-ui/core';
 
-export default ({ questionIndex, setOrientation }) => {
-  const [value, setValue] = React.useState('female');
+export default ({ questionIndex, currentOrientation, setOrientation }) => {
+  const [value, setValue] = React.useState(currentOrientation);
 
   const handleChange = event => {
     setValue(event.target.value);

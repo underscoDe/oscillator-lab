@@ -84,10 +84,11 @@ class QuizzPenduleElastique extends Component {
     });
   };
 
-  chooseOrientation = index => {
+
+  chooseOrientation = (index, forModification = null) => {
     // This method fires the orientation choose modal
     const { questions } = this.state;
-    if (!questions[index].checked) {
+    if (!questions[index].checked || (questions[index].checked && forModification)) {
       // In case the force is checked, the modal is opened to choose an orientation
       swal({
         text: "Choisir l'orientation de la force",
@@ -97,6 +98,7 @@ class QuizzPenduleElastique extends Component {
         content: (
           <OrientationContent
             questionIndex={index}
+            currentOrientation={questions[index].orientation}
             setOrientation={(index, value) => this.checkRadioBox(index, value)}
           />
         )
@@ -152,6 +154,7 @@ class QuizzPenduleElastique extends Component {
                   inputProps={{ 'aria-label': 'secondary checkbox' }}
                 />
                 <li>{htmlParse(question.question)}</li>
+                {question.orientation && (<span onClick={()=>this.chooseOrientation(index, true)} className="orientationChoosed">(Oriente vers: {question.orientation})</span>)}
               </p>
             ))}
             <Button
