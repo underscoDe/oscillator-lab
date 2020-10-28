@@ -1,4 +1,4 @@
-import { CHOICE_PAGE, COURSE_PAGE, QUIZZ_PAGE, QUIZZ_PENDULE_SIMPLE, QUIZZ_PENDULE_ELASTIQUE } from '../types';
+import { CHOICE_PAGE, COURSE_PAGE, QUIZZ_PAGE, QUIZZ_PENDULE_SIMPLE, QUIZZ_PENDULE_ELASTIQUE_EQUILIBRE, QUIZZ_PENDULE_ELASTIQUE_COMPRIMER, QUIZZ_PENDULE_ELASTIQUE_ETIRER } from '../types';
 
 export const goToChoice = () => dispatch => {
   dispatch({
@@ -23,8 +23,21 @@ export const goToPenduleSimple = () => dispatch => {
     type: QUIZZ_PENDULE_SIMPLE
   });
 };
-export const goToPenduleElastique = () => dispatch => {
+
+export const goToPenduleElastiqueEquilibre = () => dispatch => {
   dispatch({
-    type: QUIZZ_PENDULE_ELASTIQUE
+    type: QUIZZ_PENDULE_ELASTIQUE_EQUILIBRE
+  });
+};
+
+export const goToPenduleElastiqueComprimer = () => dispatch => {
+  dispatch({
+    type: QUIZZ_PENDULE_ELASTIQUE_COMPRIMER
+  });
+};
+
+export const goToPenduleElastiqueEtirer = () => dispatch => {
+  dispatch({
+    type: QUIZZ_PENDULE_ELASTIQUE_ETIRER
   });
 };

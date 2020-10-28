@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
-import OrientationContent from './OrientationModal';
+import OrientationContent from '../OrientationModal';
 import { Button, Checkbox } from '@material-ui/core';
-import { goToQuizz } from '../../actions';
+import ComprimedSpring from '../../../resources/comprimer.JPG';
+import { goToQuizz, goToPenduleElastiqueEtirer } from '../../../actions';
 import { connect } from 'react-redux';
-import '../styles/QuizzPenduleElastique.scss';
+import '../../styles/QuizzPenduleElastique.scss';
 
 let isArrayEqual = function(x, y) {
   // Helper function to deeply compare two array of objects
@@ -121,6 +122,8 @@ class QuizzPenduleElastique extends Component {
     // This methode will validate the final answers choosen from the quizz. The forces and their orientation
     const { answers } = this.props;
     const { questions } = this.state;
+    console.log(answers);
+    console.log(questions);
     if (isArrayEqual(answers, questions)) {
       this.setState({ quizzPassed: true });
       swal('BRAVO', 'Vous avez reussi le quiz', 'success');
@@ -131,19 +134,15 @@ class QuizzPenduleElastique extends Component {
   };
 
   render() {
-    const { goToQuizzPage } = this.props;
+    const { goToQuizzPage, goToNextQuizzPage } = this.props;
     const { questions, quizzPassed } = this.state;
     return (
       <>
-        <Button
-          color='default'
-          variant='contained'
-          onClick={() => goToQuizzPage()}>
-          Retour
-        </Button>
         <div className='penduleElastiqueRoot'>
-          <h3>Quizz sur le Pendule Elastique (En equilibre)</h3>
-          <div className='animationSVG'>Animation will be here</div>
+          <h3>Quizz sur le Pendule Elastique (Comprimé)</h3>
+          <div className='animationSVG'>
+            <img src={ComprimedSpring} alt="System a comprimer" />
+          </div>
           <p>
             Choisissez les forces s'appliquant au solide et leurs orientations
           </p>
@@ -168,7 +167,7 @@ class QuizzPenduleElastique extends Component {
               Verifier vos reponses
             </Button>
             {quizzPassed && (<Button
-              //onClick={} Go to the next Quizz
+              onClick={() => goToNextQuizzPage()}
               style={{marginLeft: '1rem'}}
               color='default'
               variant='contained'>
@@ -182,11 +181,12 @@ class QuizzPenduleElastique extends Component {
 }
 
 const mapDispatchToProps = {
-  goToQuizzPage: goToQuizz
+  goToQuizzPage: goToQuizz,
+  goToNextQuizzPage: goToPenduleElastiqueEtirer,
 };
 
 const mapStateToProps = state => ({
-  answers: state.penduleElastiqueAnswers
+  answers: state.penduleElastiqueAnswers.comprimer
 });
 
 const connectedComponent = connect(

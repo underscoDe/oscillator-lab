@@ -20,7 +20,9 @@ import StartMenu from '../../components/main/StartMenu';
 import CourseSlide from '../../components/main/CourseSlide';
 import QuizzPage from '../../components/main/QuizzPage';
 import QuizzPenduleSimple from '../../components/main/QuizzPenduleSimple';
-import QuizzPenduleElastique from '../../components/main/QuizzPenduleElastique';
+import QuizzPenduleElastiqueEquilibre from '../../components/main/QuizzPenduleElastique/Equilibre';
+import QuizzPenduleElastiqueComprimer from '../../components/main/QuizzPenduleElastique/Comprimer';
+import QuizzPenduleElastiqueEtirer from '../../components/main/QuizzPenduleElastique/Etirer';
 
 const styles = Styles;
 
@@ -69,7 +71,9 @@ class Main extends Component {
           {labSection === 'coursePage' && <CourseSlide />}
           {labSection === 'quizzPage' && <QuizzPage />}
           {labSection === 'quizzPenduleSimple' && <QuizzPenduleSimple />}
-          {labSection === 'quizzPenduleElastique' && <QuizzPenduleElastique />}
+          {labSection === 'quizzPenduleElastiqueEquilibre' && <QuizzPenduleElastiqueEquilibre />}
+          {labSection === 'quizzPenduleElastiqueComprimer' && <QuizzPenduleElastiqueComprimer />}
+          {labSection === 'quizzPenduleElastiqueEtirer' && <QuizzPenduleElastiqueEtirer />}
         </div>
       </main>
     );

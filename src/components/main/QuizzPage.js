@@ -1,5 +1,5 @@
 import React from 'react';
-import { goToPenduleSimple, goToPenduleElastique, goToChoice } from '../../actions';
+import { goToPenduleSimple, goToPenduleElastiqueEquilibre, goToChoice } from '../../actions';
 import { connect } from 'react-redux';
 import { Button } from "@material-ui/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +29,7 @@ const QuizzPage = ({ goToPenduleSimplePage, goToPenduleElastiquePage, goToChoice
 const mapDispatchToProps = {
   goToChoicePage: goToChoice,
   goToPenduleSimplePage: goToPenduleSimple,
-  goToPenduleElastiquePage: goToPenduleElastique,
+  goToPenduleElastiquePage: goToPenduleElastiqueEquilibre,
 };
 
 const connectedComponent = connect(null, mapDispatchToProps)(QuizzPage);

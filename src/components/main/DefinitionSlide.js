@@ -6,9 +6,9 @@ const DefinitionSlide = () => (
     <div className="def-container">
         <div className="def">
             <h2>Définition</h2>
-            <p>On appelle <span>oscillateur</span> 
-                (ou système oscillant) un système 
-                pouvant évoluer, du fait de ses caractéristiques 
+            <p>On appelle <span>oscillateur</span>
+                (ou système oscillant) un système
+                pouvant évoluer, du fait de ses caractéristiques
                 propres, de façon périodique et alternative autour
                 d'une position d'équilibre.</p>
         </div>
@@ -21,7 +21,7 @@ const DefinitionSlide = () => (
             </ul>
         </div>
         <figure>
-            <img src="{OscillatorExamples}" alt="Exemples d'oscillateurs" />
+            <img src={OscillatorExamples} alt="Exemples d'oscillateurs" />
             <figcaption>Exemples d'oscillateurs mécaniques</figcaption>
         </figure>
         <p>Il existe plusieurs systèmes d'oscillateurs mécaniques dont celui du
