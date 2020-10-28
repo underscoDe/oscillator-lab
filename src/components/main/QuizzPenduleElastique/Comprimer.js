@@ -122,8 +122,6 @@ class QuizzPenduleElastique extends Component {
     // This methode will validate the final answers choosen from the quizz. The forces and their orientation
     const { answers } = this.props;
     const { questions } = this.state;
-    console.log(answers);
-    console.log(questions);
     if (isArrayEqual(answers, questions)) {
       this.setState({ quizzPassed: true });
       swal('BRAVO', 'Vous avez reussi le quiz', 'success');
