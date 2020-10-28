@@ -34,5 +34,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.penduleElastiqueRoot .forceChoose .groupChoice .orientationChoosed {
+  color: crimson;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.penduleElastiqueRoot .forceChoose .groupChoice .orientationChoosed:hover {
+  font-weight: bold;
 }
 /*# sourceMappingURL=QuizzPenduleElastique.css.map */

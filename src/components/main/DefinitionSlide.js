@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/DefinitionSlide.css';
-import OscillatorExamples from '../../resources/OscillatorExamples.jpeg';
+import OscillatorExamples from '../../resources/OscillatorsExamples.png';
 
 const DefinitionSlide = () => (
     <div className="def-container">
@@ -21,10 +21,10 @@ const DefinitionSlide = () => (
             </ul>
         </div>
         <figure>
-            <img src="{OscillatorExamples}" alt="Exemples d'oscillateurs" />
-            <figcaption>Exemples d'oscillateurs mécaniques</figcaption>
+            <img src={OscillatorExamples} alt="Exemples d'oscillateurs" />
+            <figcaption>Exemples illustrés d'oscillateurs mécaniques</figcaption>
         </figure>
-        <p>Il existe plusieurs systèmes d'oscillateurs mécaniques dont celui du
+        <p className="note"><span>Note:</span> Il existe plusieurs systèmes d'oscillateurs mécaniques dont celui du
             <span>pendule élastique</span> et du <span>pendule simple.</span></p>
     </div>
 );

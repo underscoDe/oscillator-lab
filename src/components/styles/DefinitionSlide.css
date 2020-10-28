@@ -1,17 +1,16 @@
-.def-container .def, .def-container .ex {
+.def-container .def, .def-container .ex, .def-container figure {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .def-container {
-  border: 1px solid black;
+  margin-top: 35px;
 }
 
 .def-container .def {
   padding: 30px;
   width: 800px;
-  margin-top: 30px;
-  margin-left: 30px;
+  margin: 30px auto;
 }
 
 .def-container .def h2 {
@@ -27,8 +26,7 @@
 
 .def-container .ex {
   width: 800px;
-  margin-top: 40px;
-  margin-left: 160px;
+  margin: 40px auto;
   padding: 30px;
 }
 
@@ -42,5 +40,40 @@
   margin-left: 35px;
   list-style-type: circle;
   font-family: 'Quando';
+}
+
+.def-container figure {
+  width: 800px;
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+  font: 12px 'Quando';
+}
+
+.def-container .note {
+  width: 800px;
+  margin: 0 auto;
+  font: 15px 'Quando';
+  line-height: 25px;
+}
+
+.def-container .note span {
+  display: inline-block;
+  position: relative;
+}
+
+.def-container .note span:first-child {
+  font-weight: bold;
+  color: #880707;
+}
+
+.def-container .note span:first-child::after {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 3px;
+  background: #880707;
+  bottom: 0;
+  left: 0;
 }
 /*# sourceMappingURL=DefinitionSlide.css.map */

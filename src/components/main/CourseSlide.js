@@ -12,6 +12,7 @@ import {
 import SummarySlide from './SummarySlide';
 import DefinitionSlide from './DefinitionSlide';
 import ElasticPendulumFirstSlide from './ElasticPendulumFirstSlide';
+import ElasticPendulumSecondSlide from './ElasticPendulumSecondSlide';
 
 class CourseSlide extends Component {
     render() {
@@ -27,7 +28,8 @@ class CourseSlide extends Component {
                 <div className="course-section">
                     {/*courseSlides === 1 && <SummarySlide />*/}
                     {/*courseSlides === 2 && <DefinitionSlide />*/}
-                    <DefinitionSlide />
+                    {/*courseSlides === 3 && <ElasticPendulumFirstSlide />*/}
+                    <ElasticPendulumSecondSlide />
                 </div>
                 <div className="menu-section">
                     <div className='menu__buttons'>

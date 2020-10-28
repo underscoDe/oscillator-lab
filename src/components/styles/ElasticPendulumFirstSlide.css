@@ -1,4 +1,40 @@
-.epend-container {
-  border: 1px solid black;
+div.epend-container p.first-p, div.epend-container p.snd-p {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+div.epend-container h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  font: 27px 'Poppins';
+  font-weight: bold;
+}
+
+div.epend-container p.first-p {
+  width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  margin-top: 20px;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+
+div.epend-container p.snd-p {
+  width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+
+div.epend-container figure {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+div.epend-container figure figcaption {
+  font: 13px 'Quando';
 }
 /*# sourceMappingURL=ElasticPendulumFirstSlide.css.map */
