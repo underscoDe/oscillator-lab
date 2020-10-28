@@ -1,0 +1,53 @@
+$element-width: 800px;
+
+%box-shadow {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+div.spend-container {
+    h2 {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 10px;
+        font: 27px 'Poppins';
+        font-weight: bold;
+    }
+
+    p.first-p {
+        width: $element-width;
+        padding: 30px;
+        margin: 30px auto;
+        margin-top: 20px;
+        @extend %box-shadow;
+        font-family: 'Quando';
+        line-height: 25px;
+    }
+
+    p.snd-p {
+        width: $element-width;
+        padding: 30px;
+        margin: 30px auto;
+        @extend %box-shadow;
+        font-family: 'Quando';
+        line-height: 25px;
+    }
+
+    div.figures {
+        display: flex;
+        width: $element-width;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: space-around;
+        figure {
+            width: $element-width/3;
+            img {
+                display: inline-block;
+                width: 250px;
+                height: 250px;
+            }
+            figcaption {
+                font: 15px 'Quando';
+            }
+        }
+    }
+}

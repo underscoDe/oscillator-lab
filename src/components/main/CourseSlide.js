@@ -13,6 +13,7 @@ import SummarySlide from './SummarySlide';
 import DefinitionSlide from './DefinitionSlide';
 import ElasticPendulumFirstSlide from './ElasticPendulumFirstSlide';
 import ElasticPendulumSecondSlide from './ElasticPendulumSecondSlide';
+import SimplePendulumFirstSlide from './SimplePendulumFirstSlide';
 
 class CourseSlide extends Component {
     render() {
@@ -29,7 +30,8 @@ class CourseSlide extends Component {
                     {/*courseSlides === 1 && <SummarySlide />*/}
                     {/*courseSlides === 2 && <DefinitionSlide />*/}
                     {/*courseSlides === 3 && <ElasticPendulumFirstSlide />*/}
-                    <ElasticPendulumSecondSlide />
+                    {/*courseSlides === 4 && <ElasticPendulumSecondSlide />*/}
+                    <SimplePendulumFirstSlide />
                 </div>
                 <div className="menu-section">
                     <div className='menu__buttons'>
