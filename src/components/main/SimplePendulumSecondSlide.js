@@ -1,21 +1,20 @@
 import React from 'react';
+import '../styles/SimplePendulumSecondSlide.css';
+import Blank from '../../resources/Blank.jpg';
 
 const SimplePendulumFirstSlide = () => (
-    <div>
-        <p>L'objet est soumis à son poids P, à la te</p>
-        <p>A l'équilibre, le fil est vertival. La position de G en mouvement 
-            est repérée par l'angle @ entre le fil et sa position d'équilibre (
-                écart ou abscisse angulaire).
-        </p>
+    <div className="spend-container-2">
+        <p className="first-p">L'objet est soumis à son poids <strong>p </strong>, 
+        à la tension du fil <strong>T</strong>, à la force des frottements 
+        de l'air <strong>f </strong>et à la poussée d'Archimède <strong>II</strong>.</p>
+        <p className="snd-p">Le travail de la tension <strong>T </strong> du 
+        fil est nul car cette force est perpendiculaire à chaque instant au 
+        vecteur déplacement.</p>
         <figure>
-            <img src="" alt="Pendule simple" />
-            <figcaption>Pendule simple en position d'équilibre.</figcaption>
-        </figure>
-        <figure>
-            <img src="" alt="Pendule simple" />
-            <figcaption>Pendule simple dont la position est repérée par l'abscisse 
-                angulaire @
-            </figcaption>
+            <img src={Blank} alt="Pendule simple" />
+            <figcaption>Les forces exercées sur le pendule simple sont la tension 
+                du fil <strong>T </strong>et le poids <strong>P </strong> (si on 
+                néglige la force de frottement et la poussée d'Archimède).</figcaption>
         </figure>
     </div>
 );

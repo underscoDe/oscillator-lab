@@ -1,0 +1,26 @@
+div.spend-container-3 p.first-p, div.spend-container-3 p.snd-p {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+div.spend-container-3 {
+  margin-top: 200px;
+}
+
+div.spend-container-3 p.first-p {
+  width: 800px;
+  padding: 40px;
+  margin: 50px auto;
+  margin-top: 20px;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+
+div.spend-container-3 p.snd-p {
+  width: 800px;
+  padding: 40px;
+  margin: 50px auto;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+/*# sourceMappingURL=SimplePendulumThirdSlide.css.map */

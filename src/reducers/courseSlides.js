@@ -4,7 +4,7 @@ import {
 } from '../types';
 
 const initialState = 1;
-const slideCount = 2;
+const slideCount = 7;
 
 export default (state = initialState, action) => {
     if(action.type === NEXT_SLIDE) {

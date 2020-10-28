@@ -1,0 +1,27 @@
+$element-width: 800px;
+
+%box-shadow {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+div.spend-container-3 {
+    margin-top: 200px;
+    p.first-p {
+        width: $element-width;
+        padding: 40px;
+        margin: 50px auto;
+        margin-top: 20px;
+        @extend %box-shadow;
+        font-family: 'Quando';
+        line-height: 25px;
+    }
+
+    p.snd-p {
+        width: $element-width;
+        padding: 40px;
+        margin: 50px auto;
+        @extend %box-shadow;
+        font-family: 'Quando';
+        line-height: 25px;
+    }
+}
