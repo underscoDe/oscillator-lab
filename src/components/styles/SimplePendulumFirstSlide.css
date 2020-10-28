@@ -1,0 +1,55 @@
+div.spend-container p.first-p, div.spend-container p.snd-p {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+div.spend-container h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  font: 27px 'Poppins';
+  font-weight: bold;
+}
+
+div.spend-container p.first-p {
+  width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  margin-top: 20px;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+
+div.spend-container p.snd-p {
+  width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  font-family: 'Quando';
+  line-height: 25px;
+}
+
+div.spend-container div.figures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+div.spend-container div.figures figure {
+  width: 266.66667px;
+}
+
+div.spend-container div.figures figure img {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+}
+
+div.spend-container div.figures figure figcaption {
+  font: 15px 'Quando';
+}
+/*# sourceMappingURL=SimplePendulumFirstSlide.css.map */

@@ -4,18 +4,10 @@ $element-width: 800px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-div.epend-container {
-    h2 {
-        margin-top: 10px;
-        margin-left: 10px;
-        padding: 10px;
-        font: 27px 'Poppins';
-        font-weight: bold;
-    }
-
+div.epend-container-2 {
     p.first-p {
         width: $element-width;
-        padding: 30px;
+        padding: 20px;
         margin: 30px auto;
         margin-top: 20px;
         @extend %box-shadow;
@@ -25,7 +17,16 @@ div.epend-container {
 
     p.snd-p {
         width: $element-width;
-        padding: 30px;
+        padding: 20px;
+        margin: 30px auto;
+        @extend %box-shadow;
+        font-family: 'Quando';
+        line-height: 25px;
+    }
+
+    p.trd-p {
+        width: $element-width;
+        padding: 20px;
         margin: 30px auto;
         @extend %box-shadow;
         font-family: 'Quando';
@@ -38,6 +39,12 @@ div.epend-container {
         text-align: center;
         figcaption {
             font: 13px 'Quando';
+            margin-top: 10px;
+        }
+        img {
+            display: inline-block;
+            width: 250px;
+            height: 250px;
         }
     }
 }
