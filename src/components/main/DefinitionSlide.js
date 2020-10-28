@@ -22,11 +22,7 @@ const DefinitionSlide = () => (
         </div>
         <figure>
             <img src={OscillatorExamples} alt="Exemples d'oscillateurs" />
-<<<<<<< HEAD
-            <figcaption>Exemples d'oscillateurs mécaniques</figcaption>
-=======
             <figcaption>Exemples illustrés d'oscillateurs mécaniques</figcaption>
->>>>>>> 82fd46be1745c8037e5448d92e780fa75d0f031b
         </figure>
         <p className="note"><span>Note:</span> Il existe plusieurs systèmes d'oscillateurs mécaniques dont celui du
             <span>pendule élastique</span> et du <span>pendule simple.</span></p>
