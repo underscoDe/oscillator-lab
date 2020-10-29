@@ -5,8 +5,9 @@ import htmlParse from 'html-react-parser';
 import OrientationContent from '../OrientationModal';
 import { Button, Checkbox } from '@material-ui/core';
 import StretchedSpring from '../../../resources/etirer.JPG';
-import { goToChoice } from '../../../actions';
+import { goToChoice, goToQuizz } from '../../../actions';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../styles/QuizzPenduleElastique.scss';
 
 let isArrayEqual = function(x, y) {
@@ -132,7 +133,7 @@ class QuizzPenduleElastique extends Component {
   };
 
   render() {
-    const { goToChoicePage } = this.props;
+    const { goToChoicePage, goToQuizzPage, goToChoice } = this.props;
     const { questions, quizzPassed } = this.state;
     return (
       <>
@@ -173,13 +174,27 @@ class QuizzPenduleElastique extends Component {
             </Button>)}
           </ul>
         </div>
+        <div className='menu__buttons_quiz'>
+          <ul>
+            <li onClick={() => goToChoice()} className='learn__item'>
+              <FontAwesomeIcon icon='home' size='3x' className='liFa' />
+              <span className='cours__text'>Menu</span>
+            </li>
+            <li onClick={() => goToQuizzPage()} className='quiz__item'>
+              <FontAwesomeIcon icon='brain' size='3x' className='liFa' />
+              <span className='quiz__text'>Quiz</span>
+            </li>
+          </ul>
+        </div>
       </>
     );
   }
 }
 
 const mapDispatchToProps = {
+  goToQuizzPage: goToQuizz,
   goToChoicePage: goToChoice,
+  goToChoice
 };
 
 const mapStateToProps = state => ({

@@ -5,8 +5,9 @@ import htmlParse from 'html-react-parser';
 import OrientationContent from '../OrientationModal';
 import { Button, Checkbox } from '@material-ui/core';
 import EquilibreSpring from '../../../resources/equilibre.JPG';
-import { goToQuizz, goToPenduleElastiqueComprimer } from '../../../actions';
+import { goToQuizz, goToPenduleElastiqueComprimer, goToChoice } from '../../../actions';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../styles/QuizzPenduleElastique.scss';
 
 let isArrayEqual = function(x, y) {
@@ -132,18 +133,12 @@ class QuizzPenduleElastique extends Component {
   };
 
   render() {
-    const { goToQuizzPage, goToNextQuizzPage } = this.props;
+    const { goToQuizzPage, goToNextQuizzPage, goToChoice } = this.props;
     const { questions, quizzPassed } = this.state;
     return (
       <>
-        <Button
-          color='default'
-          variant='contained'
-          onClick={() => goToQuizzPage()}>
-          Retour
-        </Button>
         <div className='penduleElastiqueRoot'>
-          <h3>Quizz sur le Pendule Elastique (En equilibre)</h3>
+          <h3>Quizz sur le Pendule Elastique (En équilibre)</h3>
           <div className='animationSVG'>
             <img src={EquilibreSpring} alt="System a l'equilibre" />
           </div>
@@ -179,6 +174,18 @@ class QuizzPenduleElastique extends Component {
             </Button>)}
           </ul>
         </div>
+        <div className='menu__buttons_quiz'>
+          <ul>
+            <li onClick={() => goToChoice()} className='learn__item'>
+              <FontAwesomeIcon icon='home' size='3x' className='liFa' />
+              <span className='cours__text'>Menu</span>
+            </li>
+            <li onClick={() => goToQuizzPage()} className='quiz__item'>
+              <FontAwesomeIcon icon='brain' size='3x' className='liFa' />
+              <span className='quiz__text'>Quiz</span>
+            </li>
+          </ul>
+        </div>
       </>
     );
   }
@@ -187,6 +194,7 @@ class QuizzPenduleElastique extends Component {
 const mapDispatchToProps = {
   goToQuizzPage: goToQuizz,
   goToNextQuizzPage: goToPenduleElastiqueComprimer,
+  goToChoice
 };
 
 const mapStateToProps = state => ({
