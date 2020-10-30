@@ -33,9 +33,9 @@ class CourseSlide extends Component {
                     {courseSlides === 2 && <DefinitionSlide />}
                     {courseSlides === 3 && <ElasticPendulumFirstSlide />}
                     {courseSlides === 4 && <ElasticPendulumSecondSlide />}
-                    {courseSlides === 5 &&  <SimplePendulumFirstSlide />}
-                    {courseSlides === 6 &&  <SimplePendulumSecondSlide />}
-                    {courseSlides === 7 &&  <SimplePendulumThirdSlide />}
+                    {courseSlides === 5 && <SimplePendulumFirstSlide />}
+                    {courseSlides === 6 && <SimplePendulumSecondSlide />}
+                    {courseSlides === 7 && <SimplePendulumThirdSlide />}
                 </div>
                 <div className="menu-section">
                     <div className='menu__buttons'>

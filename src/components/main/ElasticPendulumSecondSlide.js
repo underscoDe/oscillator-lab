@@ -1,11 +1,28 @@
 import React from 'react';
 import '../styles/ElasticPendulumSecondSlide.css';
 import Blank from '../../resources/Blank.jpg';
+import { Node, Context } from 'react-mathjax';
+import {
+    Fraction,
+    toTex,
+    Expression,
+    Formula
+} from 'algebra.js';
+
+Formula = props => (
+    <Context input="tex">
+        <Node inline>{props.tex}</Node>
+    </Context>
+);
+
+const a = new Fraction(1, 2);
+const exp = new Expression("k").multiply("x").pow(2).multiply(a);
+const form = <Formula tex={`${toTex(exp)}`}/>
 
 const ElasticPendulumSecondSlide = () => (
     <div className="epend-container-2">
         <p className="first-p">Du fait de l'allongement ou du raccourcissement du ressort, le système 
-            emmagasine de l'énergie potentielle élastique, d'expression : <span></span> 
+emmagasine de l'énergie potentielle élastique, d'expression : <span>{form}</span> 
             où <strong>k</strong> est la constante de raideur du ressort.
         </p>
         <p className="snd-p">Si tous les frottements peuvent être négligés, l'énergie mécanique du 
