@@ -5,6 +5,7 @@ import contextReducer from './context';
 import userReducer from './users';
 import labSectionReducer from './labSection';
 import penduleElastiqueReducer from './penduleElastique';
+import penduleSimpleReducer from './penduleSimple';
 import courseSlidesReducer from './courseSlides';
 
 export default combineReducers({
@@ -14,5 +15,6 @@ export default combineReducers({
   user: userReducer,
   labSection: labSectionReducer,
   penduleElastiqueAnswers: penduleElastiqueReducer,
+  penduleSimpleAnswers: penduleSimpleReducer,
   courseSlides: courseSlidesReducer
 });
