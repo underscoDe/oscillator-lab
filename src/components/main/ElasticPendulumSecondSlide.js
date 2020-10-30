@@ -1,15 +1,14 @@
 import React from 'react';
 import '../styles/ElasticPendulumSecondSlide.css';
 import Blank from '../../resources/Blank.jpg';
-import { Node, Context } from 'react-mathjax';
+import { Node, Context } from 'react-mathjax2';
 import {
     Fraction,
     toTex,
-    Expression,
-    Formula
+    Expression
 } from 'algebra.js';
 
-Formula = props => (
+const Formula = props => (
     <Context input="tex">
         <Node inline>{props.tex}</Node>
     </Context>
