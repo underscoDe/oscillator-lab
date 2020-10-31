@@ -21,11 +21,11 @@ const form = <Formula tex={`${toTex(exp)}`}/>
 const ElasticPendulumSecondSlide = () => (
     <div className="epend-container-2">
         <p className="first-p">Du fait de l'allongement ou du raccourcissement du ressort, le système 
-emmagasine de l'énergie potentielle élastique, d'expression : <span>{form}</span> 
+emmagasine de l'énergie potentielle élastique, d'expression : <span>Epé = {form}</span> 
             où <strong>k</strong> est la constante de raideur du ressort.
         </p>
         <p className="snd-p">Si tous les frottements peuvent être négligés, l'énergie mécanique du 
-            pendule est constante : <span></span>
+            pendule est constante : <span>Em = Ec + Epé = constante</span>
         </p>
         <p className="trd-p">L'énergie cinétique se transfome en énergie potentielle de pesanteur, 
             et réciproquement, l'énergie potentielle de la pesanteur se transforme 

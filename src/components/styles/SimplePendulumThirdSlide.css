@@ -16,6 +16,10 @@ div.spend-container-3 p.first-p {
   line-height: 25px;
 }
 
+div.spend-container-3 p.first-p span {
+  font-weight: bold;
+}
+
 div.spend-container-3 p.snd-p {
   width: 800px;
   padding: 40px;

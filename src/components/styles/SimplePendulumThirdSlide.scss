@@ -14,6 +14,9 @@ div.spend-container-3 {
         @extend %box-shadow;
         font-family: 'Quando';
         line-height: 25px;
+        span {
+            font-weight: bold;
+        }
     }
 
     p.snd-p {

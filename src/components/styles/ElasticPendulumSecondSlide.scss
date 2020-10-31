@@ -13,6 +13,9 @@ div.epend-container-2 {
         @extend %box-shadow;
         font-family: 'Quando';
         line-height: 25px;
+        span {
+            font-weight: bold;
+        }
     }
 
     p.snd-p {
@@ -22,6 +25,9 @@ div.epend-container-2 {
         @extend %box-shadow;
         font-family: 'Quando';
         line-height: 25px;
+        span {
+            font-weight: bold;
+        }
     }
 
     p.trd-p {

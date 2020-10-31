@@ -12,12 +12,20 @@ div.epend-container-2 p.first-p {
   line-height: 25px;
 }
 
+div.epend-container-2 p.first-p span {
+  font-weight: bold;
+}
+
 div.epend-container-2 p.snd-p {
   width: 800px;
   padding: 20px;
   margin: 30px auto;
   font-family: 'Quando';
   line-height: 25px;
+}
+
+div.epend-container-2 p.snd-p span {
+  font-weight: bold;
 }
 
 div.epend-container-2 p.trd-p {
