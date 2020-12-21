@@ -115,12 +115,17 @@ $bg: radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 1
     height: 20rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: rgba(19, 108, 180, 0.801);
+    background-color: rgb(255, 255, 255);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    .Lottie {
+      width: auto;
+      height: auto;
     }
   }
 

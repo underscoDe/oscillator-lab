@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/ElasticPendulumSecondSlide.css';
 import Blank from '../../resources/Blank.jpg';
+import energiePotentielle from '../../resources/energiePotentielle.png';
 import { Node, Context } from 'react-mathjax2';
 import {
     Fraction,
@@ -32,7 +33,7 @@ emmagasine de l'énergie potentielle élastique, d'expression : <span>Epé = {fo
             en énergie cinétique, au cours du mouvement.
         </p>
         <figure>
-            <img src={Blank} alt="Energies" />
+            <img src={energiePotentielle} alt="Energies" />
             <figcaption>
                 Energie potentielle, cinétique et mécanique d'un pendule simple 
                 ou d'un pendule élastique en <strong>absence</strong> de frottements.

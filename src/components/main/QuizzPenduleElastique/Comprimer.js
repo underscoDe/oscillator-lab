@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import _ from 'lodash';
 import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
@@ -9,6 +9,8 @@ import { goToQuizz, goToPenduleElastiqueEtirer, goToChoice } from '../../../acti
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../styles/QuizzPenduleElastique.scss';
+import Lottie from 'react-lottie';
+import * as animationData from './animationData';
 
 let isArrayEqual = function(x, y) {
   // Helper function to deeply compare two array of objects
@@ -96,7 +98,7 @@ class QuizzPenduleElastique extends Component {
       swal({
         text: "Choisir l'orientation de la force",
         buttons: {
-          cancel: 'Ferme'
+          cancel: 'Fermer'
         },
         content: (
           <OrientationContent
@@ -135,12 +137,24 @@ class QuizzPenduleElastique extends Component {
   render() {
     const { goToQuizzPage, goToNextQuizzPage, goToChoice } = this.props;
     const { questions, quizzPassed } = this.state;
+
+    {/*const [pause, setPause] = useState(false);*/}
+    const defaultOptions = {
+      loop: true,
+      /*autoplay: pause,*/
+      animationData: animationData.comprimeSansForces,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+      }
+    };
+
     return (
       <>
         <div className='penduleElastiqueRoot'>
           <h3>Quizz sur le Pendule Elastique (Comprimé)</h3>
           <div className='animationSVG'>
-            <img src={ComprimedSpring} alt="System a comprimer" />
+            {/*<img src={ComprimedSpring} alt="System a comprimer" />*/}
+            <Lottie className="Lottie" options={defaultOptions} height={400} width={700} isClickToPauseDisabled={true} />
           </div>
           <p>
             Choisissez les forces s'appliquant au solide et leurs orientations

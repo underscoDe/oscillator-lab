@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/ElasticPendulumFirstSlide.css';
 import Blank from '../../resources/Blank.jpg';
+import etatsPenduleElastique from '../../resources/etatsPenduleElastique.png';
 
 const ElasticPendulumFirstSlide = () => (
     <div className="epend-container">
@@ -11,7 +12,7 @@ const ElasticPendulumFirstSlide = () => (
             du ressort. En position d'équilibre, lorsque le ressort n'est ni étiré, 
             ni comprimé, son abscisse est nulle, il est en équilibre.</p>
         <figure>
-            <img src={Blank} alt="Elastic pendulum systems" />
+            <img src={etatsPenduleElastique} alt="Elastic pendulum systems" />
             <figcaption>Différents états du pendule élastique</figcaption>
         </figure>
     </div>

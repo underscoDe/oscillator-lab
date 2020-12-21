@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/SimplePendulumFirstSlide.css';
 import Blank from '../../resources/Blank.jpg';
+import penduleSimpleEquilibre from '../../resources/penduleSimpleEquilibre.png';
+import penduleSimpleMvt from '../../resources/penduleSimpleMvt.png';
+
 
 const SimplePendulumFirstSlide = () => (
     <div className="spend-container">
@@ -16,11 +19,11 @@ const SimplePendulumFirstSlide = () => (
         </p>
         <div className="figures">
             <figure>
-                <img src={Blank} alt="Pendule simple" />
+                <img src={penduleSimpleEquilibre} alt="Pendule simple" />
                 <figcaption>Pendule simple en position d'équilibre.</figcaption>
             </figure>
             <figure>
-                <img src={Blank} alt="Pendule simple" />
+                <img src={penduleSimpleMvt} alt="Pendule simple" />
                 <figcaption>Pendule simple dont la position est repérée par l'abscisse 
                     angulaire @
                 </figcaption>

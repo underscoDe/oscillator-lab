@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/SimplePendulumSecondSlide.css';
 import Blank from '../../resources/Blank.jpg';
+import penduleSimpleForces from '../../resources/penduleSimpleForces.png';
 
 const SimplePendulumFirstSlide = () => (
     <div className="spend-container-2">
@@ -11,7 +12,7 @@ const SimplePendulumFirstSlide = () => (
         fil est nul car cette force est perpendiculaire à chaque instant au 
         vecteur déplacement.</p>
         <figure>
-            <img src={Blank} alt="Pendule simple" />
+            <img src={penduleSimpleForces} alt="Pendule simple" />
             <figcaption>Les forces exercées sur le pendule simple sont la tension 
                 du fil <strong>T </strong>et le poids <strong>P </strong> (si on 
                 néglige la force de frottement et la poussée d'Archimède).</figcaption>

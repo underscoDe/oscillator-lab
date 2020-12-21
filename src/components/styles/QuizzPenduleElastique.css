@@ -138,7 +138,7 @@
   height: 20rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: rgba(19, 108, 180, 0.801);
+  background-color: white;
 }
 
 .penduleElastiqueRoot .animationSVG img {
@@ -146,6 +146,11 @@
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.penduleElastiqueRoot .animationSVG .Lottie {
+  width: auto;
+  height: auto;
 }
 
 .penduleElastiqueRoot .forceChoose {

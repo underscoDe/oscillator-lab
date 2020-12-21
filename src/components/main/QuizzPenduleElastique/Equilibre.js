@@ -4,7 +4,8 @@ import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
 import OrientationContent from '../OrientationModal';
 import { Button, Checkbox } from '@material-ui/core';
-import EquilibreSpring from '../../../resources/equilibre.JPG';
+import EquilibreSansForces from '../../../resources/EquilibreSansForces.svg';
+import EquilibreAvecForces from '../../../resources/EquilibreAvecForces.svg';
 import { goToQuizz, goToPenduleElastiqueComprimer, goToChoice } from '../../../actions';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -96,7 +97,7 @@ class QuizzPenduleElastique extends Component {
       swal({
         text: "Choisir l'orientation de la force",
         buttons: {
-          cancel: 'Ferme'
+          cancel: 'Fermer'
         },
         content: (
           <OrientationContent
@@ -140,7 +141,9 @@ class QuizzPenduleElastique extends Component {
         <div className='penduleElastiqueRoot'>
           <h3>Quizz sur le Pendule Elastique (En équilibre)</h3>
           <div className='animationSVG'>
-            <img src={EquilibreSpring} alt="System a l'equilibre" />
+            {/*<img src={EquilibreSansForces} alt="Systeme à l'équilibre" />*/}
+            {!quizzPassed ? <img src={EquilibreSansForces} alt="Systeme à l'équilibre sans force" />
+              : <img src={EquilibreAvecForces} alt="Systeme à l'équilibre avec forces" />}
           </div>
           <p>
             Choisissez les forces s'appliquant au solide et leurs orientations

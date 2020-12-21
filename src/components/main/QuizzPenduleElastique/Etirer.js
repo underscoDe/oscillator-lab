@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import _ from 'lodash';
 import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
@@ -9,6 +9,7 @@ import { goToChoice, goToQuizz } from '../../../actions';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../styles/QuizzPenduleElastique.scss';
+import Lottie from 'react-lottie';
 
 let isArrayEqual = function(x, y) {
   // Helper function to deeply compare two array of objects
@@ -96,7 +97,7 @@ class QuizzPenduleElastique extends Component {
       swal({
         text: "Choisir l'orientation de la force",
         buttons: {
-          cancel: 'Ferme'
+          cancel: 'Fermer'
         },
         content: (
           <OrientationContent
@@ -135,6 +136,9 @@ class QuizzPenduleElastique extends Component {
   render() {
     const { goToChoicePage, goToQuizzPage, goToChoice } = this.props;
     const { questions, quizzPassed } = this.state;
+
+    
+
     return (
       <>
         <div className='penduleElastiqueRoot'>

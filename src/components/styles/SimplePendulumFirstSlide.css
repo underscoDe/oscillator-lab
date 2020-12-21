@@ -45,8 +45,10 @@ div.spend-container div.figures figure {
 
 div.spend-container div.figures figure img {
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
+  -webkit-box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
 div.spend-container div.figures figure figcaption {

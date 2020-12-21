@@ -96,7 +96,7 @@ class QuizzPenduleSimple extends Component {
       swal({
         text: "Choisir l'orientation de la force",
         buttons: {
-          cancel: 'Ferme'
+          cancel: 'Fermer'
         },
         content: (
           <OrientationContent

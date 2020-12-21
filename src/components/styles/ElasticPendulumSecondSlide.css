@@ -49,7 +49,9 @@ div.epend-container-2 figure figcaption {
 
 div.epend-container-2 figure img {
   display: inline-block;
-  width: 250px;
+  width: 460px;
   height: 250px;
+  -webkit-box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
 }
 /*# sourceMappingURL=ElasticPendulumSecondSlide.css.map */

@@ -42,8 +42,9 @@ div.spend-container {
             width: $element-width/3;
             img {
                 display: inline-block;
-                width: 250px;
-                height: 250px;
+                width: 240px;
+                height: 240px;
+                box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
             }
             figcaption {
                 font: 15px 'Quando';

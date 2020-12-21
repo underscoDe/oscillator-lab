@@ -37,4 +37,12 @@ div.epend-container figure {
 div.epend-container figure figcaption {
   font: 13px 'Quando';
 }
+
+div.epend-container figure img {
+  display: inline-block;
+  height: 330px;
+  width: 600px;
+  -webkit-box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+}
 /*# sourceMappingURL=ElasticPendulumFirstSlide.css.map */
