@@ -1,10 +1,10 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import _ from 'lodash';
 import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
 import OrientationContent from '../OrientationModal';
 import { Button, Checkbox } from '@material-ui/core';
-import ComprimedSpring from '../../../resources/comprimer.JPG';
+//import ComprimedSpring from '../../../resources/comprimer.JPG';
 import { goToQuizz, goToPenduleElastiqueEtirer, goToChoice } from '../../../actions';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -142,7 +142,7 @@ class QuizzPenduleElastique extends Component {
     const defaultOptions = {
       loop: true,
       /*autoplay: pause,*/
-      animationData: animationData.comprimeSansForces,
+      animationData: !quizzPassed ? animationData.comprimeSansForces : animationData.comprimeAvecForces,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
       }

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import _ from 'lodash';
 import swal from '@sweetalert/with-react';
 import htmlParse from 'html-react-parser';
@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../styles/QuizzPenduleElastique.scss';
 import Lottie from 'react-lottie';
+import * as animationData from './animationData';
 
 let isArrayEqual = function(x, y) {
   // Helper function to deeply compare two array of objects
@@ -137,7 +138,14 @@ class QuizzPenduleElastique extends Component {
     const { goToChoicePage, goToQuizzPage, goToChoice } = this.props;
     const { questions, quizzPassed } = this.state;
 
-    
+    const defaultOptions = {
+      loop: true,
+      /*autoplay: pause,*/
+      animationData: !quizzPassed ? animationData.etireSansForces : animationData.etireAvecForces,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+      }
+    };
 
     return (
       <>
