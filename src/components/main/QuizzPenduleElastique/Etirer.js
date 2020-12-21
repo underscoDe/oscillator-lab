@@ -152,7 +152,8 @@ class QuizzPenduleElastique extends Component {
         <div className='penduleElastiqueRoot'>
           <h3>Quizz sur le Pendule Elastique (Etiré)</h3>
           <div className='animationSVG'>
-            <img src={StretchedSpring} alt="System a etirer" />
+            {/*<img src={StretchedSpring} alt="System a etirer" />*/}
+            <Lottie className="Lottie" options={defaultOptions} height={400} width={700} isClickToPauseDisabled={true} />
           </div>
           <p>
             Choisissez les forces s'appliquant au solide et leurs orientations
